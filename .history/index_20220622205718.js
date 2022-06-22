@@ -31,23 +31,4 @@ class LocalCart{
        updateCartUI()
         
     }
-
-    static removeItemFromCart(id){
-        let cart = LocalCart.getLocalCartItems()
-        if(cart.has(id)){
-            let mapItem = cart.get(id)
-            if(mapItem.quantity>1)
-           {
-            mapItem.quantity -=1
-            cart.set(id, mapItem)
-           }
-           else
-           cart.delete(id)
-        } 
-        if (cart.length===0)
-        localStorage.clear()
-        else
-        localStorage.setItem(LocalCart.key,  JSON.stringify(Object.fromEntries(cart)))
-           updateCartUI()
-        }
-    }
+    
