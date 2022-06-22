@@ -71,27 +71,14 @@ function addItemFunction(e){
  console.log(price)
 }
 
-cartIcon.addEventListener('mouseover', ()=>{
-    if(wholeCart.classList.contains('hide'))
-    wholeCart.classList.remove('hide')
-    })
-    
-    cartIcon.addEventListener('mouseleave', ()=>{
-       
-        setTimeout( () =>{
-            if(wholeCart.inWindow===0){
-                wholeCart.classList.add('hide')
-            }
-        } ,500 )
-        
-        })
-    
-     wholeCart.addEventListener('mouseover', ()=>{
-         wholeCart.inWindow=1
-     })  
-     
-     wholeCart.addEventListener('mouseleave', ()=>{
-        wholeCart.inWindow=0
-        wholeCart.classList.add('hide')
-    })  
-     
+function addItemFunction(e){
+    const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id")
+    const img = e.target.parentElement.parentElement.previousElementSibling.src
+    const name = e.target.parentElement.previousElementSibling.textContent
+    const desc = e.target.parentElement.children[0].textContent
+    let price = e.target.parentElement.children[1].textContent
+    price = price.replace("Price: $", '')
+    const item = new CartItem(name, desc, img, price)
+    LocalCart.addItemToLocalCart(id, item)
+ console.log(price)
+}

@@ -77,7 +77,7 @@ cartIcon.addEventListener('mouseover', ()=>{
     })
     
     cartIcon.addEventListener('mouseleave', ()=>{
-       
+        // if(wholeCart.classList.contains('hide'))
         setTimeout( () =>{
             if(wholeCart.inWindow===0){
                 wholeCart.classList.add('hide')

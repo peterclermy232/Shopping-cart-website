@@ -71,27 +71,3 @@ function addItemFunction(e){
  console.log(price)
 }
 
-cartIcon.addEventListener('mouseover', ()=>{
-    if(wholeCart.classList.contains('hide'))
-    wholeCart.classList.remove('hide')
-    })
-    
-    cartIcon.addEventListener('mouseleave', ()=>{
-       
-        setTimeout( () =>{
-            if(wholeCart.inWindow===0){
-                wholeCart.classList.add('hide')
-            }
-        } ,500 )
-        
-        })
-    
-     wholeCart.addEventListener('mouseover', ()=>{
-         wholeCart.inWindow=1
-     })  
-     
-     wholeCart.addEventListener('mouseleave', ()=>{
-        wholeCart.inWindow=0
-        wholeCart.classList.add('hide')
-    })  
-     
