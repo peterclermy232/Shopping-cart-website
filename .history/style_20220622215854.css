@@ -42,6 +42,7 @@ h2{
 }
 
 .cart-wrapper{
+    marg
     overflow-y: auto;
     max-height: 350px;
     width:24vw;
@@ -169,5 +170,6 @@ margin-top: 35%;
 .container,h4{
     text-align: center;
 }
-
-
+p{
+    line-height: 4.8;
+}
