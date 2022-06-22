@@ -59,15 +59,3 @@ addToCartBtns.forEach((btn) => {
     btn.addEventListener('click', addItemFunction)
 })
 
-function addItemFunction(e){
-    const id = e.target.parentElement.parentElement.parentElement.getAttribute("data-id")
-    const img = e.target.parentElement.parentElement.previousElementSibling.src
-    const name = e.target.parentElement.previousElementSibling.textContent
-    const desc = e.target.parentElement.children[0].textContent
-    let price = e.target.parentElement.children[1].textContent
-    price = price.replace("Price: $", '')
-    const item = new CartItem(name, desc, img, price)
-    LocalCart.addItemToLocalCart(id, item)
- console.log(price)
-}
-

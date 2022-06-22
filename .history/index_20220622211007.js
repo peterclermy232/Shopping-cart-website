@@ -70,4 +70,3 @@ function addItemFunction(e){
     LocalCart.addItemToLocalCart(id, item)
  console.log(price)
 }
-
