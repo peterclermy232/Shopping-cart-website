@@ -127,13 +127,4 @@ cartIcon.addEventListener('mouseover', ()=>{
            })
             cartWrapper.append(cartItem)
         }
-        if(count > 0){
-            cartIcon.classList.add('non-empty')
-            let root = document.querySelector(':root')
-            root.style.setProperty('--after-content', `"${count}"`)
-            const subtotal = document.querySelector('.subtotal')
-            subtotal.innerHTML = `SubTotal: $${total}`
-        }
-        else
-        cartIcon.classList.remove('non-empty')
-    }
+        
