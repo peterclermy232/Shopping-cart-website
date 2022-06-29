@@ -152,10 +152,11 @@ cartIcon.addEventListener('mouseover', ()=>{
             console.log(data)
             const title = document.querySelector('section#productDetails h4')
             const description = document.querySelector('section#productDetails p')
-            //const image = document.querySelector('section#productDetails img')
+            const image = document.querySelector('section#productDetails')
             
             title.innerText = data.title;
             description.innerText = data.description;
+            image.innerText = data.imagae
         
           });
         });
